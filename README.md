@@ -58,7 +58,16 @@ Changes are developed and tested on `develop` before being merged into `main`.
 
 ## Changelog
 
-### v1.0
+### v1.1 – Mobile Experience Improvements
+
+- Improved responsive layout for smartphones and tablets
+- Enhanced spacing and visual hierarchy on smaller screens
+- Optimized hero section and card layout
+- Improved button behavior and touch usability
+- Refined responsive breakpoints
+- No content changes
+
+### v1.0 – Initial Public Release
 
 - Initial public release
 - Multi-language support (DE / EN / ES)
