@@ -4,7 +4,7 @@ Personal one-page profile website presenting my experience in Banking and Enterp
 
 ## Live Website
 
-https://toni-bradatsch-ai.github.io/toni-bradatsch/
+https://toni-bradatsch-ai.github.io/
 
 ## Profile Summary
 
