@@ -4,7 +4,7 @@ Personal profile website presenting more than 15 years of experience in Banking 
 
 ## Live Website
 
-https://toni-bradatsch-ai.github.io/toni-bradatsch/
+https://toni-bradatsch-ai.github.io/
 
 ## Professional Profile
 
