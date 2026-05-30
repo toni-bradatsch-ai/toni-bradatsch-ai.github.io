@@ -6,7 +6,7 @@ Personal one-page profile website showcasing my experience in Banking and Enterp
 
 This repository contains the source code for my public professional profile:
 
-**Website:** https://toni-bradatsch-ai.github.io/toni-bradatsch/
+**Website:** https://toni-bradatsch-ai.github.io/
 
 The page provides an overview of:
 
