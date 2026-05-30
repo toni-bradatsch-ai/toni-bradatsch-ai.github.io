@@ -1,44 +1,71 @@
 # Toni Bradatsch – Senior Banking IT Professional
 
-Personal one-page profile website presenting my experience in Banking and Enterprise IT with a focus on Application Ownership, Service Operations, Integration, Delivery and Platform Modernization.
+Personal profile website presenting more than 15 years of experience in Banking and Enterprise IT, with a focus on Application Ownership, Service Operations, Technical Integration, Release Management and Platform Modernization.
 
 ## Live Website
 
 https://toni-bradatsch-ai.github.io/
 
-## Profile Summary
+## Professional Profile
 
-Senior Banking IT Professional with more than 15 years of experience in Banking and Enterprise IT, including more than 10 years within the Deutsche Bank environment.
+Senior Banking IT Professional with more than 15 years of experience in Banking and Enterprise IT, including more than 10 years at Deutsche Bank and 14 years within the Deutsche Bank ecosystem.
 
-Experienced in application operations, service management, integration, delivery, requirements engineering and platform modernization across highly regulated banking landscapes.
+Experienced across the full application lifecycle, covering application operations, service management, integration, requirements engineering, testing, release management and platform modernization in highly regulated financial environments.
 
-## Key Areas
+## Areas of Expertise
 
 * Application Ownership
 * Service Operations
-* Integration & Delivery
+* Technical Integration
+* Release & Deployment Management
 * Requirements Engineering
-* Platform Modernization
-* Cloud Adoption
-* Release & Deployment Engineering
+* API Management
+* OpenShift & Container Platforms
+* Cloud Adoption & Automation
 * Banking Platforms
 * Lending & Financing Systems
 
-## Features
+## Professional Background
 
-### Version 1.2
+### Deutsche Bank AG
 
-* Responsive one-page website
+**2015 – 2026**
+
+Roles and responsibilities across:
+
+* Application Operations
+* Integration & Delivery
+* Requirements Engineering
+* Test & Release Management
+* API Management
+* OpenShift Platform Modernization
+* Lending & Mortgage Platforms
+* Cloud Adoption Initiatives
+
+### SQS AG / Expleo
+
+**2010 – 2015**
+
+* QA & Test Analysis
+* Integration Testing
+* End-to-End Testing
+* SAP Banking Services
+
+## Website Features
+
+### Version 1.3
+
+* Responsive one-page profile website
 * German, English and Spanish language support
-* Professional profile and experience overview
 * Interactive language switching
 * Dark and light theme support
-* Banking-focused positioning
-* Mobile-optimized layout
 * Professional portrait integration
-* GitHub Pages hosting
+* Banking-focused professional positioning
+* Mobile-optimized layout
+* GitHub Pages deployment
+* Custom branding and favicon integration
 
-## Technology
+## Technology Stack
 
 * HTML5
 * CSS3
@@ -50,33 +77,43 @@ Experienced in application operations, service management, integration, delivery
 ```text
 .
 ├── index.html
-├── assets
-│   ├── profile.jpg
-│   └── ...
-└── README.md
+├── README.md
+└── assets
+    ├── profile.jpg
+    ├── favicon-32x32.png
+    ├── favicon-64x64.png
+    ├── favicon-180x180.png
+    └── favicon-512x512.png
 ```
 
-## Development
+## Development Workflow
 
 Branching strategy:
 
 ```text
 main     → Production
-develop  → Ongoing development
+develop  → Ongoing Development
 ```
 
-Changes are developed and tested on `develop` before being merged into `main`.
+Changes are implemented and validated on `develop` before being merged into `main`.
 
 ## Changelog
 
-### v1.2 – Profile Enhancement
+### v1.3 – Branding & Professional Presentation
 
 * Added professional portrait integration
+* Added custom TB branding icon
+* Added favicon support
+* Improved visual identity
+* Refined spacing and content presentation
+* Maintained multilingual support (DE / EN / ES)
+
+### v1.2 – Profile Enhancement
+
 * Improved hero section presentation
 * Enhanced mobile responsiveness
 * Improved spacing and visual hierarchy
 * Refined overall user experience
-* No changes to profile content
 
 ### v1.1 – Mobile Experience Improvements
 
@@ -94,4 +131,6 @@ Changes are developed and tested on `develop` before being merged into `main`.
 
 ## License
 
-Personal portfolio website. All rights reserved.
+Personal portfolio website.
+
+All rights reserved.
