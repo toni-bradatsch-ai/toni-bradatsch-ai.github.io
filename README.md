@@ -1,6 +1,6 @@
 # Toni Bradatsch – Senior Banking IT Professional
 
-Personal profile website presenting more than 15 years of experience in Banking and Enterprise IT, with a focus on Application Ownership, Service Operations, Technical Integration, Release Management and Platform Modernization.
+Personal profile website presenting more than 15 years of experience in Banking and Enterprise IT, with a focus on Application Ownership, Service Operations, Technical Integration, Release Management, Platform Modernization and Cloud Adoption.
 
 ## Live Website
 
@@ -10,7 +10,7 @@ https://toni-bradatsch-ai.github.io/
 
 Senior Banking IT Professional with more than 15 years of experience in Banking and Enterprise IT, including more than 10 years at Deutsche Bank and 14 years within the Deutsche Bank ecosystem.
 
-Experienced across the full application lifecycle, covering application operations, service management, integration, requirements engineering, testing, release management and platform modernization in highly regulated financial environments.
+Experienced across the full application lifecycle, covering application operations, service management, integration, requirements engineering, testing, release management, platform modernization and cloud adoption within highly regulated financial environments.
 
 ## Areas of Expertise
 
@@ -24,6 +24,36 @@ Experienced across the full application lifecycle, covering application operatio
 * Cloud Adoption & Automation
 * Banking Platforms
 * Lending & Financing Systems
+
+## Preferred Roles
+
+* Application Owner
+* Service Owner
+* Technical Product Owner
+* Application Integration & Operations Engineer
+* Technical Business Analyst
+
+## Selected Transformation Highlights
+
+### Banking Quality & Test Transformation
+
+End-to-end testing, integration testing, migration testing and test automation across SAP Banking Services, SAP CML, SAP Deposit Management and related banking platforms.
+
+### Lending Process & Integration Transformation
+
+Interface design, data modelling and integration concepts for mortgage and lending processes.
+
+### Lending Platform Modernization
+
+Modernization of business-critical lending platforms through refactoring, database restructuring and containerization.
+
+### Legacy-to-Container Transformation
+
+Migration of Lending Service Layer components from legacy environments to OpenShift 3 and later OpenShift 4.
+
+### Cloud Foundation & Platform Enablement
+
+Implementation support for a Google Cloud landing zone using Infrastructure as Code and migration of selected workloads.
 
 ## Professional Background
 
@@ -51,9 +81,21 @@ Roles and responsibilities across:
 * End-to-End Testing
 * SAP Banking Services
 
+## Languages
+
+* German (Native)
+* English (Fluent)
+* Spanish (Working Proficiency)
+
+## Location & Availability
+
+* Frankfurt am Main, Germany
+* Available for hybrid roles within the Frankfurt metropolitan area
+* Available for remote-first opportunities across Germany
+
 ## Website Features
 
-### Version 1.3
+### Version 1.4
 
 * Responsive one-page profile website
 * German, English and Spanish language support
@@ -62,8 +104,9 @@ Roles and responsibilities across:
 * Professional portrait integration
 * Banking-focused professional positioning
 * Mobile-optimized layout
-* GitHub Pages deployment
 * Custom branding and favicon integration
+* Transformation-focused professional profile
+* GitHub Pages deployment
 
 ## Technology Stack
 
@@ -95,9 +138,16 @@ main     → Production
 develop  → Ongoing Development
 ```
 
-Changes are implemented and validated on `develop` before being merged into `main`.
-
 ## Changelog
+
+### v1.4 – Professional Profile Expansion
+
+* Added Transformation Highlights section
+* Added Technical Product Owner positioning
+* Expanded professional profile and role descriptions
+* Added language and availability information
+* Improved navigation and mobile experience
+* Refined content structure and professional positioning
 
 ### v1.3 – Branding & Professional Presentation
 
@@ -128,6 +178,9 @@ Changes are implemented and validated on `develop` before being merged into `mai
 * Multi-language support (DE / EN / ES)
 * GitHub Pages deployment
 * Senior Banking IT Professional positioning
+
+
+Changes are implemented and validated on `develop` before being merged into `main`.
 
 ## License
 
