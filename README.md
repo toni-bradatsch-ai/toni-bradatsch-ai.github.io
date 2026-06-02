@@ -1,4 +1,4 @@
-# Toni Bradatsch – Senior Banking IT Professional
+# Toni Bradatsch – Senior IT Professional
 
 Personal profile website presenting more than 15 years of experience in Banking and Enterprise IT, with a focus on Application Ownership, Service Operations, Technical Integration, Release Management, Platform Modernization and Cloud Adoption.
 
@@ -8,7 +8,7 @@ https://toni-bradatsch-ai.github.io/
 
 ## Professional Profile
 
-Senior Banking IT Professional with more than 15 years of experience in Banking and Enterprise IT, including more than 10 years at Deutsche Bank and 14 years within the Deutsche Bank ecosystem.
+Senior IT Professional with more than 15 years of experience in Banking and Enterprise IT, including more than 10 years at Deutsche Bank and 14 years within the Deutsche Bank ecosystem.
 
 Experienced across the full application lifecycle, covering application operations, service management, integration, requirements engineering, testing, release management, platform modernization and cloud adoption within highly regulated financial environments.
 
