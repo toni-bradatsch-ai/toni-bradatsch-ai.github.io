@@ -257,6 +257,3 @@ Changes are implemented and validated on `develop` before being merged into `mai
 * Replaced Platform Engineering with Platform Modernization & Transformation
 * Improved alignment between competencies and actual project experience
 * Strengthened emphasis on modernization, migration and integration initiatives
-
-```
-```
