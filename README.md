@@ -47,7 +47,7 @@ Strong track record working across business, development, testing, operations an
 * Change Management
 * Configuration Management
 
-### Platform Engineering & Modernization
+### Platform Modernization & Transformation
 
 * OpenShift 3 / 4
 * Google Cloud Platform (GCP)
@@ -60,10 +60,10 @@ Strong track record working across business, development, testing, operations an
 
 # Preferred Roles
 
-* Application Owner
-* Service Owner
-* Technical Product Owner
 * Application Integration & Operations Engineer
+* Technical Application Manager
+* Technical Systems Analyst
+* IT Service Owner
 * Technical Business Analyst
 
 ---
@@ -110,6 +110,7 @@ Responsibilities included:
 * Platform Modernization
 * OpenShift Migration Initiatives
 * Cloud Adoption Initiatives
+* Technical Risk Assessment & Migration Planning
 * Lending & Mortgage Platforms
 
 ## SQS AG / Expleo
@@ -179,7 +180,7 @@ Responsibilities included:
 
 # Website Features
 
-### Version 1.5
+### Version 1.6
 
 * Responsive one-page professional profile website
 * German, English and Spanish language support
@@ -233,82 +234,29 @@ Changes are implemented and validated on `develop` before being merged into `mai
 
 # Changelog
 
-## v1.5 – Positioning & Competency Refinement
+## v1.6 – Professional Positioning Alignment
 
-### Positioning & Branding
+### Professional Positioning
 
-* Repositioned profile as Senior IT Professional
-* Retained Banking & Enterprise IT as primary domain expertise
-* Improved consistency across title, hero section and profile descriptions
-* Broadened positioning to support opportunities beyond the banking sector
+* Refined positioning as Senior IT Professional (Banking & Enterprise IT)
+* Improved consistency between website, CV and repository documentation
+* Reduced emphasis on role-specific titles and engineering-only positioning
+* Strengthened focus on Application Operations, Technical Integration, Platform Modernization and Enterprise Transformation
 
-### Contact & Professional Messaging
+### Preferred Roles
 
-* Reworked contact section messaging
-* Introduced technical generalist positioning
-* Emphasized collaboration across business, development, testing, operations and architecture
-* Updated German, English and Spanish content
+* Replaced Application Owner positioning
+* Replaced Service Owner positioning
+* Removed Technical Product Owner positioning
+* Added Technical Application Manager
+* Added Technical Systems Analyst
+* Improved consistency across all language versions
 
-### Skills & Competencies
+### Competencies
 
-* Refined competency structure
-* Added stronger focus on:
+* Replaced Platform Engineering with Platform Modernization & Transformation
+* Improved alignment between competencies and actual project experience
+* Strengthened emphasis on modernization, migration and integration initiatives
 
-  * Requirements Engineering
-  * Technical Specification
-  * API Management
-  * Technical Integration
-  * Platform Modernization
-* Reduced excessive focus on testing and operations
-* Improved alignment between competencies and professional experience
-
-### Recruiter Experience
-
-* Improved clarity for recruiters and hiring managers
-* Better visibility of transferable Enterprise IT skills
-* Stronger balance between Banking specialization and broader Enterprise IT applicability
-
-## v1.4 – Professional Profile Expansion
-
-* Added Transformation Highlights section
-* Added Technical Product Owner positioning
-* Expanded professional profile and role descriptions
-* Added language and availability information
-* Improved navigation and mobile experience
-* Refined content structure and professional positioning
-
-## v1.3 – Branding & Professional Presentation
-
-* Added professional portrait integration
-* Added custom TB branding icon
-* Added favicon support
-* Improved visual identity
-* Refined spacing and content presentation
-
-## v1.2 – Profile Enhancement
-
-* Improved hero section presentation
-* Enhanced mobile responsiveness
-* Improved spacing and visual hierarchy
-* Refined overall user experience
-
-## v1.1 – Mobile Experience Improvements
-
-* Improved responsive layout for smartphones and tablets
-* Enhanced spacing and readability
-* Optimized navigation and button behavior
-
-## v1.0 – Initial Public Release
-
-* Initial public release
-* Multi-language support (DE / EN / ES)
-* GitHub Pages deployment
-* Senior Banking IT Professional positioning
-
----
-
-# License
-
-Personal portfolio website.
-
-All rights reserved.
+```
+```
