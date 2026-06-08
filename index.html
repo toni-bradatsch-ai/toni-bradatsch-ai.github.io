@@ -839,7 +839,36 @@ h4 + .mini{
   }
 }
 </style>
+
+<style id="mobile-v13-language-safe-padding">
+@media (max-width:768px){
+
+  /* Consistent horizontal breathing room for DE/EN/ES */
+  .container,
+  .hero,
+  .sectionHead,
+  section > div,
+  .heroContent{
+    padding-left:1rem !important;
+    padding-right:1rem !important;
+    box-sizing:border-box !important;
+  }
+
+  .title,
+  .sub{
+    max-width:none !important;
+    width:100% !important;
+  }
+
+  .tags,
+  .mini,
+  .actions{
+    width:100% !important;
+  }
+}
+</style>
 </head>
+
 
 
 
