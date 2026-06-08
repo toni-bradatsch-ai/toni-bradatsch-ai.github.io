@@ -1,6 +1,10 @@
 # Toni Bradatsch – Senior IT Professional
 
-Personal profile website showcasing more than 15 years of experience in Banking and Enterprise IT, with a focus on application operations, technical integration, platform modernization, release management and enterprise transformation initiatives.
+Senior IT Professional with more than 15 years of experience in Banking and Enterprise IT, including more than 10 years at Deutsche Bank and 14 years within the Deutsche Bank ecosystem.
+
+Specialized in Application Operations, Technical Integration, Release & Deployment Management, Platform Modernization and Enterprise Transformation initiatives across highly regulated banking environments.
+
+---
 
 ## Live Website
 
@@ -10,17 +14,35 @@ https://toni-bradatsch-ai.github.io/
 
 # Professional Profile
 
-Senior IT Professional with more than 15 years of hands-on experience in highly regulated Banking and Enterprise IT environments, including more than 10 years at Deutsche Bank and 14 years within the Deutsche Bank ecosystem.
+Experienced across the full application and delivery lifecycle, supporting business-critical banking platforms from requirements engineering and technical analysis through integration, testing, release management, application operations and modernization initiatives.
 
-Experienced across the full software and application lifecycle, spanning requirements engineering, technical specification, integration, testing, release management, application operations, platform modernization and cloud adoption initiatives.
+Strong track record collaborating with business stakeholders, development teams, quality assurance, operations and platform engineering functions in complex Run-the-Bank (RTB) and Change-the-Bank (CTB) environments.
 
-Strong track record working across business, development, testing, operations and architecture teams in complex RTB (Run the Bank) and CTB (Change the Bank) environments.
+Core focus areas include:
+
+* Application Operations
+* Technical Integration
+* Requirements Engineering
+* Release & Deployment Management
+* Platform Modernization
+* Cloud Adoption Initiatives
+* Environment Management
+* API Management
+* Enterprise Transformation
 
 ---
 
-# Areas of Expertise
+# Core Competencies
 
-### Application Operations & Integration
+## Banking & Enterprise IT
+
+* Lending & Financing
+* Deposit Management
+* Business Lending
+* Enterprise Application Landscapes
+* Mission-Critical Banking Platforms
+
+## Application Operations & Integration
 
 * Application Operations
 * Technical Integration
@@ -29,31 +51,22 @@ Strong track record working across business, development, testing, operations an
 * Incident & Problem Management
 * Root Cause Analysis
 
-### Requirements, Quality & Technical Analysis
-
-* Requirements Engineering
-* Technical Specification
-* CIT / SIT / UAT Support
-* Defect Management
-* Quality Assurance
-* End-to-End Validation
-
-### Release, Delivery & Environment Management
+## Delivery & Release Management
 
 * Release Management
 * Deployment Coordination
-* CI/CD Pipelines
-* Environment Management
+* CI/CD Enablement
 * Change Management
 * Configuration Management
+* Production Readiness
 
-### Platform Modernization & Transformation
+## Platform Modernization
 
 * OpenShift 3 / 4
-* Google Cloud Platform (GCP)
+* Container Platforms
+* Platform Transformation
 * Infrastructure as Code
-* Platform Modernization
-* Containerization
+* Cloud Adoption
 * Deployment Automation
 
 ---
@@ -68,27 +81,27 @@ Strong track record working across business, development, testing, operations an
 
 ---
 
-# Selected Transformation Initiatives
+# Selected Initiatives
 
-## Banking Quality & Test Transformation
+## Banking Platform Quality Transformation
 
-End-to-end testing, integration testing, migration testing and quality assurance across SAP Banking Services, SAP CML, SAP Deposit Management and other business-critical banking platforms.
-
-## Lending Process & Integration Transformation
-
-Requirements engineering, API design, interface modelling and technical integration concepts supporting lending and mortgage processes.
+End-to-end validation, integration testing and quality assurance for large-scale banking platforms including SAP Banking Services, SAP CML and SAP Deposit Management.
 
 ## Lending Platform Modernization
 
-Modernization of business-critical lending platforms through refactoring, database restructuring and platform transformation initiatives.
+Modernization and transformation of business-critical lending platforms through application refactoring, architecture evolution and platform restructuring initiatives.
 
 ## Legacy-to-Container Transformation
 
-Migration of Lending Service Layer components from legacy environments to OpenShift 3 and later OpenShift 4.
+Migration of application components from legacy environments towards OpenShift-based container platforms supporting modernization and operational efficiency goals.
+
+## Enterprise Integration Enablement
+
+Definition and implementation support for APIs, interface contracts, integration concepts and technical coordination across distributed enterprise systems.
 
 ## Cloud Foundation & Platform Enablement
 
-Implementation support for cloud adoption initiatives using Google Cloud Platform, GitHub Actions, Terraform and Infrastructure as Code.
+Support of cloud adoption and platform engineering initiatives utilizing Google Cloud Platform, GitHub Actions, Terraform and Infrastructure as Code principles.
 
 ---
 
@@ -96,22 +109,22 @@ Implementation support for cloud adoption initiatives using Google Cloud Platfor
 
 ## Deutsche Bank AG
 
-**2015 – 2026**
+**2015 – Present**
 
 Responsibilities included:
 
 * Application Operations
 * Technical Integration
 * Requirements Engineering
-* Technical Specification
+* Technical Analysis
 * API Management
 * Release Management
 * Environment Management
 * Platform Modernization
-* OpenShift Migration Initiatives
+* OpenShift Transformation Initiatives
 * Cloud Adoption Initiatives
-* Technical Risk Assessment & Migration Planning
-* Lending & Mortgage Platforms
+* Technical Migration Planning
+* Lending & Financing Platforms
 
 ## SQS AG / Expleo
 
@@ -122,40 +135,40 @@ Responsibilities included:
 * Quality Assurance
 * Test Analysis
 * Integration Testing
-* End-to-End Testing
-* SAP Banking Services
+* End-to-End Validation
 * Banking Platform Testing
+* SAP Banking Services
 
 ---
 
-# Technology Stack
+# Technologies & Tools
 
-### Platforms & Cloud
+## Platforms
 
 * OpenShift 3 / 4
 * Google Cloud Platform (GCP)
 * Docker
 
-### Automation & Delivery
+## Automation & Delivery
 
 * GitHub Actions
 * TeamCity
 * UrbanCode Deploy
 * Terraform
 
-### API & Integration
+## Integration & APIs
 
 * API Management
 * Postman
 * SoapUI
 
-### Collaboration & Service Management
+## Service & Collaboration
 
 * Jira
 * Confluence
 * ServiceNow
 
-### Development & Scripting
+## Development & Scripting
 
 * JavaScript
 * Groovy
@@ -165,33 +178,32 @@ Responsibilities included:
 # Languages
 
 * German (Native)
-* English (Fluent)
+* English (Professional Working Proficiency)
 * Spanish (Working Proficiency)
 
 ---
 
-# Location & Availability
+# Location
 
 * Frankfurt am Main, Germany
-* Open to hybrid opportunities within the Frankfurt metropolitan area
-* Open to remote-first opportunities across Germany
+* Hybrid Opportunities
+* Remote-First Opportunities
 
 ---
 
 # Website Features
 
-### Version 1.6
+## Version 2.0
 
-* Responsive one-page professional profile website
+* Executive-style professional profile
+* Responsive single-page portfolio
 * German, English and Spanish language support
-* Interactive language switching
 * Dark and light mode support
-* Professional portrait integration
-* Recruiter-focused professional positioning
-* Mobile-optimized responsive design
-* Banking & Enterprise IT specialization
-* Technical generalist positioning
-* Transformation and modernization portfolio
+* Mobile-first navigation
+* Enterprise-oriented design system
+* Banking & Enterprise IT positioning
+* Platform modernization portfolio
+* Transformation initiative showcase
 * GitHub Pages deployment
 
 ---
@@ -234,26 +246,27 @@ Changes are implemented and validated on `develop` before being merged into `mai
 
 # Changelog
 
-## v1.6 – Professional Positioning Alignment
+## v2.0 – Executive Profile Redesign
 
-### Professional Positioning
+### Design
 
-* Refined positioning as Senior IT Professional (Banking & Enterprise IT)
-* Improved consistency between website, CV and repository documentation
-* Reduced emphasis on role-specific titles and engineering-only positioning
-* Strengthened focus on Application Operations, Technical Integration, Platform Modernization and Enterprise Transformation
+* Complete visual redesign
+* Reduced visual noise and marketing elements
+* Enterprise-focused visual hierarchy
+* Improved readability and spacing system
+* Unified monochrome design language
 
-### Preferred Roles
+### Positioning
 
-* Replaced Application Owner positioning
-* Replaced Service Owner positioning
-* Removed Technical Product Owner positioning
-* Added Technical Application Manager
-* Added Technical Systems Analyst
-* Improved consistency across all language versions
+* Stronger Senior IT Professional positioning
+* Increased focus on Banking & Enterprise IT
+* Reduced emphasis on testing-only activities
+* Enhanced visibility of integration, operations and modernization experience
 
-### Competencies
+### User Experience
 
-* Replaced Platform Engineering with Platform Modernization & Transformation
-* Improved alignment between competencies and actual project experience
-* Strengthened emphasis on modernization, migration and integration initiatives
+* Improved mobile navigation
+* Refined information architecture
+* Enhanced recruiter readability
+* Better content prioritization
+* Optimized professional presentation
