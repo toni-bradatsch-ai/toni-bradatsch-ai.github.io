@@ -867,7 +867,50 @@ h4 + .mini{
   }
 }
 </style>
+
+<style id="mobile-v14-container-audit">
+@media (max-width:768px){
+
+  /* Remove desktop width constraints on mobile */
+  .container,
+  .hero,
+  .heroContent,
+  .heroCard,
+  .sectionHead,
+  .columns,
+  .stack,
+  .grid,
+  .content,
+  main,
+  section > div{
+      max-width:none !important;
+      width:100% !important;
+      min-width:0 !important;
+  }
+
+  /* Use nearly full device width */
+  .container,
+  main,
+  section > div,
+  .hero{
+      padding-left:14px !important;
+      padding-right:14px !important;
+      margin-left:0 !important;
+      margin-right:0 !important;
+      box-sizing:border-box !important;
+  }
+
+  /* Prevent narrow text columns */
+  .title,
+  .sub,
+  p,
+  .sectionHead p{
+      max-width:none !important;
+  }
+}
+</style>
 </head>
+
 
 
 
