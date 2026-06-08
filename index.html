@@ -909,7 +909,55 @@ h4 + .mini{
   }
 }
 </style>
+
+<style id="mobile-v15-s24-fix">
+@media (max-width:768px){
+
+  /* Undo overly aggressive V14 width changes */
+  .heroCard{
+      width:auto !important;
+      max-width:none !important;
+  }
+
+  /* Keep portrait visually dominant */
+  .heroPortrait{
+      width:170px !important;
+      height:170px !important;
+  }
+
+  /* Language-safe headline */
+  .title{
+      max-width:none !important;
+      width:auto !important;
+      font-size:2.15rem !important;
+  }
+
+  /* Real mobile width fix: wrapper only */
+  .wrap{
+      width:calc(100vw - 24px) !important;
+      max-width:none !important;
+      margin-left:auto !important;
+      margin-right:auto !important;
+  }
+
+  /* Let text use available width */
+  .sub,
+  .body,
+  .sectionHead p{
+      max-width:none !important;
+      width:100% !important;
+  }
+}
+
+/* S24-specific issue: base mobile breakpoint still limits title */
+@media (max-width:960px){
+  .title{
+      max-width:none !important;
+  }
+}
+</style>
 </head>
+
 
 
 
