@@ -227,8 +227,52 @@ footer{border-top-color:var(--border)}
   .contact{padding:1.25rem}
 }
 @media (max-width:430px){
-  .brand p{display:none}
-  .brandName{max-width:8ch;line-height:1.1}
+
+  .brand,
+  .brandLink{
+    min-width:0;
+    gap:.45rem;
+  }
+
+  .logo{
+    width:34px;
+    height:34px;
+    flex-shrink:0;
+  }
+
+  .brandName{
+    font-size:.82rem;
+    line-height:1.1;
+
+    max-width:none;
+
+    white-space:normal;
+    overflow:visible;
+    text-overflow:unset;
+  }
+
+  .brand p{
+    display:block;
+
+    font-size:.68rem;
+    line-height:1.15;
+
+    white-space:normal;
+    overflow:visible;
+    text-overflow:unset;
+  }
+
+  .navControls{
+    gap:.2rem;
+  }
+
+  .lang button,
+  .theme,
+  .menuToggle{
+    min-width:40px;
+    min-height:40px;
+    padding:.3rem;
+  }
 }
 </style>
 </head>
