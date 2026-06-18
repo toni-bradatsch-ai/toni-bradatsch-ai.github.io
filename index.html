@@ -156,10 +156,24 @@ header{
   font-weight:700;
 }
 .primary:hover{color:#111;background:#e5e7eb}
+.primary,.ghost{transition:background-color .18s ease,border-color .18s ease,color .18s ease}
 .ghost{color:var(--text-muted);border-color:var(--border)}
 [data-theme="light"] .primary{color:#fff;background:#334155}
 [data-theme="light"] .primary:hover{color:#fff;background:#1e293b}
-.heroCard,.card,.skill{background:var(--surface);border-color:var(--border);box-shadow:none;}
+.heroCard,.card,.skill,.tag,.mini span{
+  background:var(--surface);
+  border:1px solid var(--border);
+  box-shadow:none;
+  transition:border-color .18s ease,background-color .18s ease,color .18s ease;
+}
+
+.heroCard:hover,
+.card:hover,
+.skill:hover,
+.tag:hover,
+.mini span:hover{
+  border-color:color-mix(in srgb,var(--text) 18%,var(--border));
+}
 .heroCard{padding:1.25rem;border-radius:24px}
 .card,.skill{border-radius:18px}
 .heroPortrait{width:210px;height:210px}
