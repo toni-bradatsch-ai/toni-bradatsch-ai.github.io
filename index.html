@@ -47,7 +47,7 @@ html{scroll-behavior:smooth;scroll-padding-top:92px}
 body{min-height:100vh;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);font-size:16px;line-height:1.6}
 a{color:inherit;text-decoration:none}img,svg,video{display:block;max-width:100%;height:auto}button,input,textarea,select{font:inherit;color:inherit}:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:var(--radius-sm)}::selection{background:color-mix(in oklab,var(--accent) 24%, transparent);color:var(--text)}
 .wrap{width:min(1120px,calc(100vw - 2.5rem));margin:0 auto}
-header{position:sticky;top:0;z-index:20;background:linear-gradient(180deg,color-mix(in oklab,var(--bg) 92%, transparent),transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+header{position:sticky;top:0;z-index:20;background:linear-gradient(180deg,color-mix(in oklab,var(--bg) 92%, transparent),transparent);backdrop-filter:none;border-bottom:1px solid var(--border)}
 .header{display:flex;justify-content:space-between;align-items:center;gap:var(--space-md);padding:var(--space-md) 0}
 .brand,.brandLink{display:flex;align-items:center;gap:var(--space-sm)}
 .logo{width:40px;height:40px;border-radius:var(--radius-md);overflow:hidden;display:block}.logo img{width:100%;height:100%;object-fit:cover}
@@ -82,14 +82,19 @@ footer{margin-top:var(--space-md);padding:var(--space-md) 0 calc(var(--space-xl)
 </style>
 <style id="site-design">
 :root{
+  --header-height:72px;
   --bg:#000;
-  --surface:#000;
-  --surface-alt:#000;
+  --surface:rgba(255,255,255,.008);
+  --surface-alt:rgba(255,255,255,.026);
   --text:#fff;
   --text-muted:#aeb6c2;
   --text-soft:#8993a2;
   --accent:#cbd5e1;
-  --border:rgba(255,255,255,.06);
+  --border:rgba(255,255,255,.08);
+  --border-strong:rgba(255,255,255,.12);
+  --glass-panel:rgba(255,255,255,.008);
+  --glass-panel-hover:rgba(255,255,255,.022);
+  --glass-shadow:0 18px 54px rgba(0,0,0,.18),0 0 34px rgba(255,255,255,.012),inset 0 1px 0 rgba(255,255,255,.025);
 }
 [data-theme="light"]{
   --bg:#fafafa;
@@ -100,17 +105,61 @@ footer{margin-top:var(--space-md);padding:var(--space-md) 0 calc(var(--space-xl)
   --text-soft:#596579;
   --accent:#475569;
   --border:rgba(15,23,42,.06);
+  --border-strong:rgba(15,23,42,.1);
+  --glass-panel:#fafafa;
+  --glass-panel-hover:#f1f3f7;
+  --glass-shadow:0 8px 24px rgba(15,23,42,.06);
 }
 body{
   background:var(--bg);
   color:var(--text);
+  isolation:isolate;
+  overflow-x:clip;
+  padding-top:var(--header-height);
 }
 body::before{display:none}
+.cosmic-bg{
+  position:fixed;
+  inset:0;
+  z-index:0;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+  background:linear-gradient(180deg,#000 0%,#010101 58%,#030303 100%);
+}
+.cosmic-bg[hidden]{display:none}
+header,main,footer{
+  position:relative;
+  z-index:1;
+}
+[data-theme="light"] .cosmic-bg{display:none}
 .wrap{width:min(1240px,calc(100vw - 4rem))}
 header{
-  background:color-mix(in srgb,var(--bg) 88%,transparent);
-  border-bottom-color:var(--border);
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:50;
+  background:transparent;
+  border-bottom:0;
+  -webkit-backdrop-filter:none;
+  backdrop-filter:none;
+  box-shadow:none;
 }
+.header{
+  position:relative;
+  overflow:visible;
+  isolation:isolate;
+  margin-top:0;
+  padding:.68rem 1rem;
+  border:1px solid var(--border);
+  border-radius:18px;
+  background:rgba(0,0,0,.72);
+  -webkit-backdrop-filter:blur(18px);
+  backdrop-filter:blur(18px);
+  box-shadow:0 14px 42px rgba(0,0,0,.24),inset 0 1px 0 rgba(255,255,255,.025);
+}
+.header > *{position:relative;z-index:1}
 .brandName{font-size:1.05rem;color:var(--text)}
 .brand p{color:var(--text-muted)}
 .logo,.logo img{border-radius:50%}
@@ -119,12 +168,22 @@ header{
   min-width:44px;
   min-height:44px;
   color:var(--text-muted);
-  background:var(--surface);
+  background:rgba(255,255,255,.025);
+  border-color:var(--border);
+  -webkit-backdrop-filter:none;
+  backdrop-filter:none;
+}
+.menuToggle{
+  color:var(--text);
+  background:rgba(255,255,255,.035);
+  border-color:var(--border-strong);
+  font-size:1.15rem;
+  line-height:1;
 }
 .lang .active{
   color:var(--text);
-  background:var(--surface-alt);
-  border-color:var(--border);
+  background:rgba(255,255,255,.075);
+  border-color:var(--border-strong);
 }
 .hero{
   gap:4rem;
@@ -138,16 +197,23 @@ header{
   font-size:1.05rem;
   line-height:1.65;
 }
-.tags,.mini{gap:.5rem;margin-top:.75rem;padding-right:0}
+.tags,.mini{gap:.5rem;margin-top:0;padding-right:0}
+#tags,#locationTags,#langTags{margin-top:.9rem}
+#chips{margin-top:1rem}
+#eduTags{margin-top:.9rem}
+.skill .mini{margin-top:.9rem}
 .tag,.mini span{
   padding:.34rem .72rem;
   color:var(--text-muted);
-  border-color:var(--border);
+  border-color:rgba(255,255,255,.09);
+  background:rgba(255,255,255,.012);
+  -webkit-backdrop-filter:none;
+  backdrop-filter:none;
   font-size:.8rem;
 }
 .actions{margin-top:1.5rem}
 #meta{margin-top:1.4rem}
-#eduTags{margin-top:.75rem}
+#eduTags{margin-top:.9rem}
 #stackH{margin-top:1.5rem}
 #roles .sectionHead p,#contact .actions{margin-top:1rem}
 .primary{
@@ -160,23 +226,62 @@ header{
 .ghost{color:var(--text-muted);border-color:var(--border)}
 [data-theme="light"] .primary{color:#fff;background:#334155}
 [data-theme="light"] .primary:hover{color:#fff;background:#1e293b}
-.heroCard,.card,.skill,.tag,.mini span{
-  background:var(--surface);
+.heroCard,.card,.skill,.contact,.tag,.mini span{
   border:1px solid var(--border);
-  box-shadow:none;
-  transition:border-color .18s ease,background-color .18s ease,color .18s ease;
+  transition:border-color .22s ease,background-color .22s ease,color .22s ease,box-shadow .22s ease,transform .22s ease;
 }
 
 .heroCard:hover,
 .card:hover,
 .skill:hover,
+.contact:hover,
 .tag:hover,
 .mini span:hover{
-  border-color:color-mix(in srgb,var(--text) 18%,var(--border));
+  border-color:var(--border-strong);
 }
-.heroCard{padding:1.25rem;border-radius:24px}
+.heroCard{
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+  padding:1.25rem;
+  border-radius:18px;
+  background:var(--glass-panel);
+  border-color:var(--border);
+  -webkit-backdrop-filter:none;
+  backdrop-filter:none;
+  box-shadow:var(--glass-shadow);
+}
+.heroCard > *,
+.card > *,
+.skill > *,
+.contact > *{position:relative;z-index:1}
+.heroCard:hover{
+  background:var(--glass-panel-hover);
+  box-shadow:0 22px 58px rgba(0,0,0,.3),0 0 40px rgba(255,255,255,.025),inset 0 1px 0 rgba(255,255,255,.035);
+  transform:translateY(-1px);
+}
+.card{
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+  background:rgba(255,255,255,.012);
+  border-color:rgba(255,255,255,.07);
+  -webkit-backdrop-filter:none;
+  backdrop-filter:none;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.025),0 12px 30px rgba(0,0,0,.08);
+}
+.card:hover{
+  background:rgba(255,255,255,.026);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.035),0 16px 34px rgba(0,0,0,.12),0 0 24px rgba(255,255,255,.018);
+  transform:translateY(-1px);
+}
 .card,.skill{border-radius:18px}
-.heroPortrait{width:210px;height:210px}
+.heroPortrait{
+  width:210px;
+  height:210px;
+  border-color:rgba(255,255,255,.14);
+  box-shadow:0 18px 44px rgba(0,0,0,.3),0 0 40px rgba(116,137,190,.055);
+}
 .label{color:var(--text-soft)}
 .detail,.body,.skill p,.contact p{color:var(--text-muted)}
 .meta{color:var(--text-soft)}
@@ -184,31 +289,120 @@ section{margin-top:0;padding:7rem 0}
 .sectionHead{margin-bottom:1.5rem}
 .sectionHead h2,.contact h2{font-size:clamp(1.8rem,2.5vw,2.3rem)}
 .columns{gap:1rem}
-.skill{padding:1.25rem}
+.skill{
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+  padding:1.25rem;
+  background:var(--glass-panel);
+  border-color:var(--border);
+  -webkit-backdrop-filter:none;
+  backdrop-filter:none;
+  box-shadow:var(--glass-shadow);
+}
+.skill:hover{
+  background:var(--glass-panel-hover);
+  box-shadow:0 22px 58px rgba(0,0,0,.3),0 0 40px rgba(255,255,255,.025),inset 0 1px 0 rgba(255,255,255,.035);
+  transform:translateY(-1px);
+}
 .skill h3{margin-bottom:.45rem}
 .contact{
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
   margin:2rem 0 1rem;
   padding:2rem;
-  background:linear-gradient(135deg,color-mix(in srgb,var(--accent) 8%,var(--surface)),var(--surface));
+  border-radius:18px;
+  background:var(--glass-panel);
   border-color:var(--border);
+  -webkit-backdrop-filter:none;
+  backdrop-filter:none;
+  box-shadow:var(--glass-shadow);
+}
+.contact:hover{
+  background:var(--glass-panel-hover);
+  box-shadow:0 22px 58px rgba(0,0,0,.3),0 0 40px rgba(255,255,255,.025),inset 0 1px 0 rgba(255,255,255,.035);
+  transform:translateY(-1px);
 }
 footer{border-top-color:var(--border)}
+.tag:hover,.mini span:hover{
+  color:var(--text);
+  background:rgba(255,255,255,.035);
+  box-shadow:0 0 22px rgba(135,155,210,.055);
+}
+.ghost{
+  background:rgba(255,255,255,.008);
+  -webkit-backdrop-filter:none;
+  backdrop-filter:none;
+}
+.ghost:hover{background:rgba(255,255,255,.05)}
+[data-theme="light"] header{
+  background:transparent;
+  box-shadow:none;
+}
+[data-theme="light"] .header{
+  background:rgba(250,250,250,.92);
+  border-color:var(--border);
+  box-shadow:var(--glass-shadow);
+}
+[data-theme="light"] .lang button,
+[data-theme="light"] .theme,
+[data-theme="light"] .menuToggle,
+[data-theme="light"] .heroCard,
+[data-theme="light"] .card,
+[data-theme="light"] .skill,
+[data-theme="light"] .tag,
+[data-theme="light"] .mini span,
+[data-theme="light"] .contact,
+[data-theme="light"] .ghost{
+  background:var(--surface);
+  border-color:var(--border);
+  box-shadow:none;
+  -webkit-backdrop-filter:none;
+  backdrop-filter:none;
+}
+[data-theme="light"] .lang .active{background:var(--surface-alt)}
+[data-theme="light"] .card:hover,
+[data-theme="light"] .skill:hover,
+[data-theme="light"] .contact:hover,
+[data-theme="light"] .tag:hover,
+[data-theme="light"] .mini span:hover,
+[data-theme="light"] .ghost:hover{
+  background:var(--surface-alt);
+  border-color:var(--border-strong);
+  box-shadow:none;
+}
 @media (max-width:960px){
   .wrap{width:min(100vw - 2rem,760px)}
   .header{gap:.5rem}
   nav{justify-content:flex-end}
   .links.open{
-    background:var(--surface);
+    display:flex;
+    position:fixed;
+    top:calc(var(--header-height) + 4px);
+    left:1rem;
+    right:1rem;
+    z-index:60;
+    border:1px solid var(--border-strong);
+    border-radius:16px;
+    background:rgba(0,0,0,.92);
+    border-color:var(--border-strong);
+    -webkit-backdrop-filter:blur(24px);
+    backdrop-filter:blur(24px);
     padding:1rem;
-    box-shadow:var(--shadow-md);
+    box-shadow:0 18px 46px rgba(0,0,0,.36);
   }
+  [data-theme="light"] .links.open{background:rgba(250,250,250,.96)}
   .links.open a{padding:.55rem}
   .hero{gap:2rem;padding-top:1.5rem}
   .title{max-width:none}
 }
 @media (max-width:640px){
+  body{padding-top:64px}
   .wrap{width:calc(100vw - 1.5rem)}
-  .header{padding:.65rem 0}
+  main,.hero,.hero > div{min-width:0;max-width:100%}
+  .header{margin-top:0;padding:.55rem .65rem;border-radius:15px}
+  .links.open{top:calc(var(--header-height) - 4px);left:.75rem;right:.75rem}
   .brandName{font-size:.9rem}
   .brand p{font-size:.72rem}
   .logo{width:36px;height:36px}
@@ -218,6 +412,13 @@ footer{border-top-color:var(--border)}
     min-height:44px;
     padding:.35rem;
   }
+  .menuToggle{
+    display:grid;
+    place-items:center;
+    flex:0 0 44px;
+    color:#fff;
+    background:rgba(255,255,255,.04);
+  }
   .hero{
     display:flex;
     flex-direction:column;
@@ -226,8 +427,8 @@ footer{border-top-color:var(--border)}
   }
   .hero > div:first-child{order:0}
   .heroCard{order:1;margin-top:.25rem;padding:1rem}
-  .title{font-size:clamp(2.15rem,10vw,2.75rem);line-height:1.02}
-  .sub{font-size:1rem;line-height:1.55}
+  .title{max-width:100%;font-size:clamp(2.15rem,10vw,2.75rem);line-height:1.02;overflow-wrap:break-word}
+  .sub,.muted{max-width:100%;font-size:1rem;line-height:1.55;overflow-wrap:break-word}
   #tags .tag:nth-child(n+5),#langTags,#chips{display:flex}
   .actions{margin-top:1.1rem}
   #meta{margin-top:1rem;font-size:.9rem}
@@ -239,6 +440,10 @@ footer{border-top-color:var(--border)}
   .columns{gap:.75rem}
   .skill{padding:1rem}
   .contact{padding:1.25rem}
+  .heroCard,.skill,.contact{
+    -webkit-backdrop-filter:none;
+    backdrop-filter:none;
+  }
 }
 @media (max-width:430px){
 
@@ -288,6 +493,27 @@ footer{border-top-color:var(--border)}
     padding:.3rem;
   }
 }
+@media (max-width:360px){
+  .header{padding:.5rem}
+  .logo{width:30px;height:30px}
+  .brandName{max-width:none;font-size:.72rem}
+  .brand p{display:none}
+  .navControls{gap:.15rem}
+  .lang{gap:.12rem}
+  .lang button,.theme{
+    min-width:34px;
+    width:34px;
+    min-height:36px;
+    height:36px;
+    padding:0;
+  }
+  .menuToggle{
+    min-width:38px;
+    min-height:38px;
+    flex-basis:38px;
+  }
+  .links.open{top:calc(var(--header-height) - 10px);left:.5rem;right:.5rem}
+}
 </style>
 </head>
 
@@ -319,7 +545,7 @@ footer{border-top-color:var(--border)}
 <section id="skills"><div class="sectionHead"><h2 id="skillsH">Skills</h2><p id="skillsP">Areas of expertise.</p></div><div class="columns"><div class="skill"><h3 id="sk1t">Application Operations & Integration</h3><p id="sk1b">Stable operation of distributed applications from an application perspective, including incident, problem and change management.</p><div class="mini"><span>API Management</span><span>Technical Integration</span><span>Incident & Problem Management</span><span>Environment Management</span></div></div><div class="skill"><h3 id="sk2t">Test, QA & test management</h3><p id="sk2b">End-to-end responsibility for testing processes in regulated environments from strategy to acceptance.</p><div class="mini"><span>Requirements Engineering</span><span>Technical Specification</span><span>CIT / SIT / UAT Support</span><span>Defect Management</span></div></div><div class="skill"><h3 id="sk3t">Release & deployment engineering</h3><p id="sk3b">Planning and execution of safe releases with a focus on reproducibility, automation and compliance.</p><div class="mini"><span>CI/CD pipelines</span><span>Release management</span><span>Deployment orchestration</span><span>Configuration management</span></div></div><div class="skill"><h3 id="sk4t">Cloud, container & platform</h3><p id="sk4b">Modernization of workloads on containerized platforms and support for cloud-based deployment scenarios.</p><div class="mini"><span>OpenShift</span><span>GCP</span><span>Infrastructure as Code</span><span>Platform Modernization</span></div></div></div></section>
 <section id="roles"><div class="sectionHead"><h2 id="rolesH">Preferred roles</h2><p id="rolesP">Ownership in operations, integration and delivery.</p></div><div class="columns"><div class="skill"><h3 id="r1t"></h3><p id="r1b"></p></div><div class="skill"><h3 id="r2t"></h3><p id="r2b"></p></div><div class="skill"><h3 id="r3t"></h3><p id="r3b"></p></div><div class="skill"><h3 id="r4t"></h3><p id="r4b"></p></div><div class="skill"><h3 id="r5t"></h3><p id="r5b"></p></div></div></section>
 <section class="contact" id="contact"><div><h2 id="contactH">Let's talk.</h2><p id="contactP">As a technical generalist, I work effectively across business, development, testing, operations and architecture, contributing wherever technical, organizational and operational challenges intersect.</p></div><div class="actions"><a class="primary" href="mailto:toni.bradatsch@gmail.com">Email me</a><a class="ghost" href="https://www.linkedin.com/in/6383883a5" target="_blank" rel="noopener noreferrer">LinkedIn profile</a></div></section>
-<footer id="footer">© 2026 Toni Bradatsch. Ready for remote-first roles in banking & enterprise environments.</footer>
+<footer id="footer">© <span id='year'></span> Toni Bradatsch. Ready for remote-first roles in banking & enterprise environments.</footer>
 </main>
 <script>
 const data={de:{role:'Senior IT Professional',nav:['Über mich','Erfahrung','Skills','Bevorzugte Rollen','Kontakt'],kicker:'Banking • Integration & Operations • Enterprise IT',title:'Senior <span class="highlight">IT Professional</span> für Banking- und Enterprise-IT.',sub:'Mehr als 15 Jahre Erfahrung in Banking- und Enterprise-IT, davon mehr als 10 Jahre bei der Deutschen Bank und 14 Jahre im Deutsche-Bank-Ökosystem. Schwerpunkte sind Anwendungsbetrieb, technische Integration, Release- und Deployment-Management, Requirement Engineering sowie die Modernisierung von Plattformen. Langjähriger technischer Ansprechpartner für Application Owner, Business Analysten und Projektverantwortliche in den Bereichen Release-Management, Deployments, technische Integration und produktionsrelevante Änderungen.',cta1:'Kontaktiere mich',cta2:'Profil & Laufbahn ansehen',meta:'Bevorzugte Rollen: Application Integration & Operations Engineer, Technical Application Manager, Technical Systems Analyst, IT Service Owner, Technical Business Analyst.',s1l:'Erfahrung',s1v:'15+ Jahre',s1d:'QA, Testmanagement, Application Operations & Integration in hochregulierten Bankumgebungen.',s2l:'Umgebungen',s2v:'Enterprise IT',s2d:'Deutsche Bank · Kredit-, Einlagen- und Banking-Plattformen · RTB & CTB in komplexen Konzernstrukturen.',s3l:'Plattformen',s3v:'Cloud & Container',s3d:'OpenShift 3/4, Docker, GCP, CI/CD-Pipelines, Infrastructure as Code, API Management.',s4l:'Fokus',s4v:'End-to-End',s4d:'Vom Requirement bis zum Go-Live: Tests, Deployments, Incident Support und Root-Cause-Analysen.',aboutH:'Über mich',about1:'Ich bin Senior IT Professional mit mehr als 15 Jahren Erfahrung in hochregulierten Banking- und Enterprise-IT-Umgebungen. Meine Expertise umfasst Anwendungsbetrieb, Integrations- und Deploymentprozesse, applikationsnahe Infrastrukturthemen und Automatisierung sowie Test-, Release- und Environment-Management, Requirement Engineering, technische Spezifikation, API-Management sowie die Abstimmung zwischen Fachbereich, Entwicklung, Betrieb und externen Partnern im Lending-, Baufinanzierungs-, Spar-, Konsumenten- und Geschäftskreditumfeld. In großen Bankorganisationen fungierte ich als zentraler technischer Ansprechpartner für geschäftskritische Lending-Plattformen über Integrations-, UAT- und Produktionsumgebungen hinweg.',about2:'Dabei war ich entlang des gesamten Software- und Systemlebenszyklus im Einsatz — von Requirements über Test, Betrieb und Incident-Management bis hin zu Releases und Migrationen auf containerisierte Plattformen wie OpenShift sowie erste Schritte in die Google Cloud Platform. Ich verbinde ein starkes End-to-End-Verständnis mit einem klaren Fokus auf stabile, audit-sichere und zugleich pragmatische Betriebs- und Releaseprozesse.',expH:'Berufserfahrung',expP:'Auswahl zentraler Rollen mit Fokus auf Lending, Anwendungsbetrieb, Test- und Release-Management in regulierten Bank- und Enterprise-Umgebungen.',e1t:'Senior IT Professional',e1m:'Deutsche Bank AG, Frankfurt am Main · Apr 2017 – Feb 2026',e1b:['Technische Verantwortung für eine geschäftskritische Lending-Service-Layer-Plattform mit zahlreichen Frontend- und Backend-Komponenten.','Technische Betreuung und Koordination von Test-, Integrations- und Produktionsumgebungen einschließlich produktionsnaher Releases, Incident-Support und Root-Cause-Analysen.','Planung, Koordination und Durchführung hunderter Enterprise-Releases unter Einhaltung regulatorischer und betrieblicher Anforderungen.','Bewertung technischer Risiken, Abstimmung von Migrations- und Rollout-Strategien sowie Unterstützung technischer Entscheidungsprozesse in Zusammenarbeit mit Projektleitung, Fachbereich und Plattformteams.','Zentraler technischer Ansprechpartner für Application Owner, Business Analysten und Projektverantwortliche bei Releases, Deployments, technischer Integration, Integrationen und produktionsrelevanten Änderungen.','Wissenstransfer, Einarbeitung und technische Betreuung neuer Teammitglieder zur Sicherstellung von Betriebs-, Release- und Plattform-Know-how.','Technische Migration bestehender Lending-Anwendungen aus Legacy-Umgebungen (DAP-Portal und Samba Shares) auf OpenShift sowie anschließende Migration aller Lending Service Layer Komponenten von OpenShift 3 auf OpenShift 4.',
@@ -470,6 +696,7 @@ themeBtn.addEventListener('click',()=>{
  document.documentElement.setAttribute('data-theme',t);
  localStorage.setItem('theme',t);
  syncThemeIcon();
+ syncCosmicBackground();
 });
 const savedTheme=localStorage.getItem('theme');
 const preferredTheme=window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';
@@ -477,6 +704,183 @@ document.documentElement.setAttribute('data-theme',savedTheme||preferredTheme);
 syncThemeIcon();
 const mt=document.getElementById('menuToggle');
 const ml=document.getElementById('mobileLinks');
+
+class CosmicBackground{
+ constructor(){
+  this.canvas=null;
+  this.ctx=null;
+  this.raf=0;
+  this.last=0;
+  this.pointer={x:0,y:0,tx:0,ty:0,enabled:matchMedia('(pointer:fine)').matches};
+  this.reduceMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  this.layers=[];
+  this.nebulae=[];
+  this.onResize=this.resize.bind(this);
+  this.onPointer=this.pointerMove.bind(this);
+  this.onVisibility=this.visibility.bind(this);
+  this.onTick=this.tick.bind(this);
+ }
+
+ start(){
+  if(this.canvas||document.documentElement.dataset.theme!=='dark') return;
+  this.canvas=document.createElement('canvas');
+  this.canvas.className='cosmic-bg';
+  this.canvas.setAttribute('aria-hidden','true');
+  document.body.prepend(this.canvas);
+  this.ctx=this.canvas.getContext('2d',{alpha:true,desynchronized:true});
+  addEventListener('resize',this.onResize,{passive:true});
+  document.addEventListener('visibilitychange',this.onVisibility);
+  if(this.pointer.enabled) addEventListener('pointermove',this.onPointer,{passive:true});
+  this.resize();
+  this.render(0);
+  if(!this.reduceMotion&&!document.hidden) this.raf=requestAnimationFrame(this.onTick);
+ }
+
+ stop(){
+  cancelAnimationFrame(this.raf);
+  this.raf=0;
+  removeEventListener('resize',this.onResize);
+  removeEventListener('pointermove',this.onPointer);
+  document.removeEventListener('visibilitychange',this.onVisibility);
+  if(this.canvas) this.canvas.remove();
+  this.canvas=null;
+  this.ctx=null;
+  this.layers=[];
+  this.nebulae=[];
+ }
+
+ visibility(){
+  if(document.hidden){
+   cancelAnimationFrame(this.raf);
+   this.raf=0;
+  }else if(this.canvas&&!this.reduceMotion&&!this.raf){
+   this.last=0;
+   this.raf=requestAnimationFrame(this.onTick);
+  }
+ }
+
+ resize(){
+  if(!this.canvas) return;
+  const dpr=Math.min(devicePixelRatio||1,innerWidth<700?1.35:1.6);
+  const width=Math.max(1,innerWidth);
+  const height=Math.max(1,innerHeight);
+  this.canvas.width=Math.round(width*dpr);
+  this.canvas.height=Math.round(height*dpr);
+  this.canvas.style.width=width+'px';
+  this.canvas.style.height=height+'px';
+  this.ctx.setTransform(dpr,0,0,dpr,0,0);
+  const area=width*height;
+  const mobile=width<700;
+  const density=mobile?.00013:.00018;
+  this.layers=[
+   this.createLayer(Math.floor(area*density*.42),.18,.45,.12,.12),
+   this.createLayer(Math.floor(area*density*.28),.35,.80,.22,.22),
+   this.createLayer(Math.floor(area*density*.10),.55,1.10,.36,.30)
+  ];
+  this.nebulae=this.createNebulae(mobile?3:5);
+ }
+
+ createLayer(count,minSize,maxSize,speed,alpha){
+  return Array.from({length:Math.max(18,count)},()=>({
+   x:Math.random()*innerWidth,
+   y:Math.random()*innerHeight,
+   r:minSize+Math.random()*(maxSize-minSize),
+   a:alpha*(.55+Math.random()*.55),
+   tw:Math.random()>.72,
+   phase:Math.random()*Math.PI*2,
+   speed:speed*(.55+Math.random()*.9)
+  }));
+ }
+
+ createNebulae(count){
+  return Array.from({length:count},(_,index)=>({
+   x:innerWidth*(.12+Math.random()*.76),
+   y:innerHeight*(.05+Math.random()*.72),
+   r:Math.max(innerWidth,innerHeight)*(.22+Math.random()*.28),
+   a:.012+Math.random()*.023,
+   hue:index%2?222:258,
+   phase:Math.random()*Math.PI*2,
+   driftX:5+Math.random()*9,
+   driftY:4+Math.random()*7
+  }));
+ }
+
+ pointerMove(event){
+  this.pointer.tx=(event.clientX/innerWidth-.5)*18;
+  this.pointer.ty=(event.clientY/innerHeight-.5)*14;
+ }
+
+ tick(now){
+  if(!this.canvas) return;
+  this.last=now;
+  this.render(now*.001);
+  this.raf=requestAnimationFrame(this.onTick);
+ }
+
+ render(time){
+  const ctx=this.ctx;
+  const width=innerWidth;
+  const height=innerHeight;
+  this.pointer.x+=(this.pointer.tx-this.pointer.x)*.035;
+  this.pointer.y+=(this.pointer.ty-this.pointer.y)*.035;
+  ctx.clearRect(0,0,width,height);
+  const base=ctx.createLinearGradient(0,0,0,height);
+  base.addColorStop(0,'#000');
+  base.addColorStop(.62,'#010101');
+  base.addColorStop(1,'#030303');
+  ctx.fillStyle=base;
+  ctx.fillRect(0,0,width,height);
+
+  ctx.save();
+  ctx.globalCompositeOperation='screen';
+  this.nebulae.forEach((nebula,index)=>{
+   const px=this.pointer.x*(.08+index*.025)+Math.sin(time*.018+nebula.phase)*nebula.driftX;
+   const py=this.pointer.y*(.08+index*.02)+Math.cos(time*.014+nebula.phase)*nebula.driftY;
+   const gradient=ctx.createRadialGradient(nebula.x+px,nebula.y+py,0,nebula.x+px,nebula.y+py,nebula.r);
+   gradient.addColorStop(0,`hsla(${nebula.hue},24%,42%,${nebula.a})`);
+   gradient.addColorStop(.42,`rgba(120,126,140,${nebula.a*.3})`);
+   gradient.addColorStop(1,'rgba(255,255,255,0)');
+   ctx.fillStyle=gradient;
+   ctx.fillRect(0,0,width,height);
+  });
+  ctx.restore();
+
+  this.layers.forEach((layer,layerIndex)=>{
+   const depth=(layerIndex+1)/this.layers.length;
+   const px=this.pointer.x*depth*.5;
+   const py=this.pointer.y*depth*.45;
+   layer.forEach(star=>{
+    let x=(star.x+px+time*star.speed*7)%width;
+    let y=(star.y+py+time*star.speed*2.2)%height;
+    if(x<0) x+=width;
+    if(y<0) y+=height;
+    const twinkle=star.tw?(.82+Math.sin(time*.8+star.phase)*.18):1;
+    if(layerIndex>0){
+     const glow=ctx.createRadialGradient(x,y,0,x,y,star.r*(layerIndex===2?8:5));
+     glow.addColorStop(0,`rgba(255,255,255,${star.a*.22*twinkle})`);
+     glow.addColorStop(1,'rgba(255,255,255,0)');
+     ctx.globalAlpha=1;
+     ctx.fillStyle=glow;
+     ctx.beginPath();
+     ctx.arc(x,y,star.r*(layerIndex===2?8:5),0,Math.PI*2);
+     ctx.fill();
+    }
+    ctx.globalAlpha=Math.min(.58,star.a*twinkle);
+    ctx.fillStyle='#fff';
+    ctx.beginPath();
+    ctx.arc(x,y,star.r,0,Math.PI*2);
+    ctx.fill();
+   });
+  });
+  ctx.globalAlpha=1;
+ }
+}
+
+const cosmicBackground=new CosmicBackground();
+function syncCosmicBackground(){
+ if(document.documentElement.dataset.theme==='dark') cosmicBackground.start();
+ else cosmicBackground.stop();
+}
 
 function setMenu(open){
  const labels=uiLabels[document.documentElement.lang]||uiLabels.de;
@@ -486,6 +890,7 @@ function setMenu(open){
 }
 
 setLang(localStorage.getItem('lang')||'de');
+syncCosmicBackground();
 
 mt.addEventListener('click',(e)=>{
  e.stopPropagation();
@@ -504,5 +909,5 @@ document.addEventListener('keydown',(e)=>{
  if(e.key==='Escape') setMenu(false);
 });
 </script>
-</body>
+<script>const y=document.getElementById('year');if(y){y.textContent=new Date().getFullYear();}</script></body>
 </html>

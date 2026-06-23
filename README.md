@@ -1,10 +1,8 @@
 # Toni Bradatsch – Senior IT Professional
 
-Senior IT Professional with more than 15 years of experience in Banking and Enterprise IT, including more than 10 years at Deutsche Bank and 14 years within the Deutsche Bank ecosystem.
+Senior IT Professional with more than 15 years of experience in Banking and Enterprise IT, including more than a decade at Deutsche Bank and over 14 years within the Deutsche Bank ecosystem.
 
-Specialized in Application Operations, Technical Integration, Release & Deployment Management, Platform Modernization and Enterprise Transformation initiatives across highly regulated banking environments.
-
----
+Specialized in Application Operations, Technical Integration, Requirements Engineering, Release & Deployment Management, Platform Modernization and Enterprise Transformation initiatives across highly regulated financial environments.
 
 ## Live Website
 
@@ -12,66 +10,50 @@ https://toni-bradatsch-ai.github.io/
 
 ---
 
-# Professional Profile
+## Professional Profile
 
-Experienced across the full application and delivery lifecycle, supporting business-critical banking platforms from requirements engineering and technical analysis through integration, testing, release management, application operations and modernization initiatives.
+Throughout my career, I have worked across the full application and delivery lifecycle of business-critical banking platforms, supporting requirements engineering, technical analysis, integration, testing, release management, application operations and modernization initiatives.
 
-Strong track record collaborating with business stakeholders, development teams, quality assurance, operations and platform engineering functions in complex Run-the-Bank (RTB) and Change-the-Bank (CTB) environments.
+My experience spans lending, financing, deposit management and enterprise banking platforms, collaborating with business stakeholders, development teams, operations, platform engineering and external partners in complex enterprise environments.
 
-Core focus areas include:
+### Core Areas of Expertise
 
-* Application Operations
-* Technical Integration
-* Requirements Engineering
+* Application Operations & Technical Integration
+* Requirements Engineering & Technical Analysis
 * Release & Deployment Management
-* Platform Modernization
-* Cloud Adoption Initiatives
-* Environment Management
-* API Management
-* Enterprise Transformation
+* API Management & Environment Management
+* Platform Modernization & Container Platforms
+* OpenShift Transformation Initiatives
+* Cloud Adoption & Automation
+* Enterprise Transformation Programs
 
 ---
 
-# Core Competencies
+## Selected Initiatives
 
-## Banking & Enterprise IT
+### Lending Platform Modernization
 
-* Lending & Financing
-* Deposit Management
-* Business Lending
-* Enterprise Application Landscapes
-* Mission-Critical Banking Platforms
+Modernization of business-critical lending platforms through application refactoring, architecture evolution, platform restructuring and modernization initiatives.
 
-## Application Operations & Integration
+### Legacy-to-Container Transformation
 
-* Application Operations
-* Technical Integration
-* API Management
-* Environment Management
-* Incident & Problem Management
-* Root Cause Analysis
+Migration of application components from legacy environments to OpenShift-based container platforms supporting operational efficiency and modernization goals.
 
-## Delivery & Release Management
+### Cloud Foundation & Platform Enablement
 
-* Release Management
-* Deployment Coordination
-* CI/CD Enablement
-* Change Management
-* Configuration Management
-* Production Readiness
+Support of cloud adoption initiatives utilizing Google Cloud Platform (GCP), GitHub Actions, Terraform and Infrastructure-as-Code principles.
 
-## Platform Modernization
+### Enterprise Integration Enablement
 
-* OpenShift 3 / 4
-* Container Platforms
-* Platform Transformation
-* Infrastructure as Code
-* Cloud Adoption
-* Deployment Automation
+Definition and implementation support of APIs, interface contracts, integration concepts and technical coordination across distributed enterprise environments.
+
+### Banking Platform Quality Transformation
+
+End-to-end validation, integration testing and quality assurance for large-scale banking platforms including SAP Banking Services, SAP CML and SAP Deposit Management.
 
 ---
 
-# Preferred Roles
+## Preferred Roles
 
 * Application Integration & Operations Engineer
 * Technical Application Manager
@@ -81,33 +63,9 @@ Core focus areas include:
 
 ---
 
-# Selected Initiatives
+## Professional Experience
 
-## Banking Platform Quality Transformation
-
-End-to-end validation, integration testing and quality assurance for large-scale banking platforms including SAP Banking Services, SAP CML and SAP Deposit Management.
-
-## Lending Platform Modernization
-
-Modernization and transformation of business-critical lending platforms through application refactoring, architecture evolution and platform restructuring initiatives.
-
-## Legacy-to-Container Transformation
-
-Migration of application components from legacy environments towards OpenShift-based container platforms supporting modernization and operational efficiency goals.
-
-## Enterprise Integration Enablement
-
-Definition and implementation support for APIs, interface contracts, integration concepts and technical coordination across distributed enterprise systems.
-
-## Cloud Foundation & Platform Enablement
-
-Support of cloud adoption and platform engineering initiatives utilizing Google Cloud Platform, GitHub Actions, Terraform and Infrastructure as Code principles.
-
----
-
-# Professional Experience
-
-## Deutsche Bank AG
+### Deutsche Bank AG
 
 **2015 – Present**
 
@@ -126,7 +84,7 @@ Responsibilities included:
 * Technical Migration Planning
 * Lending & Financing Platforms
 
-## SQS AG / Expleo
+### SQS AG / Expleo
 
 **2010 – 2015**
 
@@ -141,41 +99,41 @@ Responsibilities included:
 
 ---
 
-# Technologies & Tools
+## Technologies
 
-## Platforms
+### Platforms
 
 * OpenShift 3 / 4
 * Google Cloud Platform (GCP)
 * Docker
 
-## Automation & Delivery
+### Automation & Delivery
 
 * GitHub Actions
+* Terraform
 * TeamCity
 * UrbanCode Deploy
-* Terraform
 
-## Integration & APIs
+### Integration & APIs
 
 * API Management
 * Postman
 * SoapUI
 
-## Service & Collaboration
+### Service & Collaboration
 
 * Jira
 * Confluence
 * ServiceNow
 
-## Development & Scripting
+### Development & Scripting
 
 * JavaScript
 * Groovy
 
 ---
 
-# Languages
+## Languages
 
 * German (Native)
 * English (Professional Working Proficiency)
@@ -183,32 +141,51 @@ Responsibilities included:
 
 ---
 
-# Location
+## Location
 
-* Frankfurt am Main, Germany
+Frankfurt am Main, Germany
+
+Open to:
+
 * Hybrid Opportunities
 * Remote-First Opportunities
 
 ---
 
-# Website Features
+## Website Features
 
-## Version 2.0
+### Version 3.0
 
-* Executive-style professional profile
-* Responsive single-page portfolio
+#### Design & User Experience
+
+* Premium enterprise-oriented redesign
+* Animated cosmic dark-mode background
+* Dark and light theme support
+* Responsive mobile-first navigation
+* Glassmorphism-inspired design language
+* Improved accessibility and readability
+* Refined content hierarchy
+
+#### Professional Positioning
+
+* Refined Senior IT Professional positioning
+* Stronger Banking & Enterprise IT focus
+* Increased emphasis on Application Operations & Technical Integration
+* Expanded visibility of Platform Modernization experience
+* Improved representation of OpenShift, Cloud and Transformation initiatives
+
+#### Technical Improvements
+
+* Responsive single-page architecture
 * German, English and Spanish language support
-* Dark and light mode support
-* Mobile-first navigation
-* Enterprise-oriented design system
-* Banking & Enterprise IT positioning
-* Platform modernization portfolio
-* Transformation initiative showcase
+* Dynamic theme switching
+* Optimized performance and loading behavior
+* Cloudflare Analytics integration
 * GitHub Pages deployment
 
 ---
 
-# Technology Stack
+## Technology Stack
 
 * HTML5
 * CSS3
@@ -217,7 +194,7 @@ Responsibilities included:
 
 ---
 
-# Repository Structure
+## Repository Structure
 
 ```text
 .
@@ -233,7 +210,7 @@ Responsibilities included:
 
 ---
 
-# Development Workflow
+## Development Workflow
 
 ```text
 main     → Production
@@ -244,29 +221,18 @@ Changes are implemented and validated on `develop` before being merged into `mai
 
 ---
 
-# Changelog
+## Changelog
 
-## v2.0 – Executive Profile Redesign
-
-### Design
+### v3.0 – Professional Portfolio Redesign
 
 * Complete visual redesign
-* Reduced visual noise and marketing elements
-* Enterprise-focused visual hierarchy
-* Improved readability and spacing system
-* Unified monochrome design language
-
-### Positioning
-
-* Stronger Senior IT Professional positioning
-* Increased focus on Banking & Enterprise IT
-* Reduced emphasis on testing-only activities
-* Enhanced visibility of integration, operations and modernization experience
-
-### User Experience
-
-* Improved mobile navigation
-* Refined information architecture
+* Premium enterprise-oriented appearance
+* Animated cosmic dark-mode background
+* Improved navigation and mobile experience
 * Enhanced recruiter readability
-* Better content prioritization
-* Optimized professional presentation
+* Refined professional positioning
+* Expanded Platform Modernization portfolio
+* Improved OpenShift and Cloud visibility
+* Responsive design improvements
+* Dark and light theme support
+* GitHub Pages optimization
