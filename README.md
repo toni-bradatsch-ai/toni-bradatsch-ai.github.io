@@ -1,6 +1,6 @@
 # Toni Bradatsch – Senior IT Professional
 
-Senior IT Professional with more than 15 years of experience in Banking and Enterprise IT, including more than a decade at Deutsche Bank and over 14 years within the Deutsche Bank ecosystem.
+Senior Application Manager at DekaBank since September 2026, with more than 15 years of experience in Banking and Enterprise IT, including more than a decade at Deutsche Bank and over 14 years within the Deutsche Bank ecosystem.
 
 Specialized in Application Operations, Technical Integration, Requirements Engineering, Release & Deployment Management, Platform Modernization and Enterprise Transformation initiatives across highly regulated financial environments.
 
@@ -14,7 +14,9 @@ https://toni-bradatsch-ai.github.io/
 
 Throughout my career, I have worked across the full application and delivery lifecycle of business-critical banking platforms, supporting requirements engineering, technical analysis, integration, testing, release management, application operations and modernization initiatives.
 
-My experience spans lending, financing, deposit management and enterprise banking platforms, collaborating with business stakeholders, development teams, operations, platform engineering and external partners in complex enterprise environments.
+My experience spans wealth management, lending, financing, deposit management and enterprise banking platforms, collaborating with business stakeholders, development teams, operations, platform engineering and external partners in complex enterprise environments.
+
+Since September 2026, I have been responsible for the technical application management of [Deka-Connect+](https://www.deka.de/privatkunden/unser-angebot/anlageprodukte-strategien/deka-connect-plus), a process- and event-driven application landscape for investment-fund-based wealth management.
 
 ### Core Areas of Expertise
 
@@ -22,6 +24,8 @@ My experience spans lending, financing, deposit management and enterprise bankin
 * Requirements Engineering & Technical Analysis
 * Release & Deployment Management
 * API Management & Environment Management
+* Incident & Change Management
+* Test Environment Operations & Test Support
 * Platform Modernization & Container Platforms
 * OpenShift Transformation Initiatives
 * Cloud Adoption & Automation
@@ -65,9 +69,23 @@ End-to-end validation, integration testing and quality assurance for large-scale
 
 ## Professional Experience
 
+### DekaBank
+
+**Senior Application Manager · September 2026 – Present**
+
+Technical management of Deka-Connect+, a process- and event-driven application landscape for investment-fund-based wealth management. The solution supports advisory and distribution through Sparkassen and digital portfolio access for retail customers.
+
+Responsibilities include:
+
+* Operation and enhancement of test environments, including business and technical test support through work orders
+* Coordination of production changes and releases, operational readiness and production follow-up
+* Incident and change management for a heterogeneous application landscape
+* Establishment of a performance and volume-testing environment and preparation of a future 24/7 support model
+* Technical coordination of around 35 artifacts and deployable components across .NET, Windows Server and Linux-based third-party services
+
 ### Deutsche Bank AG
 
-**2015 – Present**
+**Senior Engineer / Engineer / Associate Engineer · August 2015 – February 2026**
 
 Responsibilities included:
 
@@ -86,7 +104,7 @@ Responsibilities included:
 
 ### SQS AG / Expleo
 
-**2010 – 2015**
+**July 2010 – July 2015**
 
 Responsibilities included:
 
@@ -101,35 +119,51 @@ Responsibilities included:
 
 ## Technologies
 
-### Platforms
+### Application Development & Runtime
+
+* .NET
+* Java
+* Spring Boot
+* Apache Tomcat
+* Oracle WebLogic
+
+### Servers & Databases
+
+* Windows Server
+* Red Hat Enterprise Linux (RHEL)
+* Oracle Database
+* Microsoft SQL Server
+
+### Platforms & Containers
 
 * OpenShift 3 / 4
-* Google Cloud Platform (GCP)
 * Docker
+* Google Cloud Platform (GCP)
 
-### Automation & Delivery
+### Version Control, Delivery & Automation
 
-* GitHub Actions
-* Terraform
+* GitLab
+* Bitbucket
+* GitHub / GitHub Actions
 * TeamCity
 * UrbanCode Deploy
+* Artifactory
+* Nexus
+* Terraform
 
-### Integration & APIs
+### Testing & Interfaces
 
-* API Management
+* ALM Octane
 * Postman
 * SoapUI
 
-### Service & Collaboration
+### Service, Collaboration & Scripting
 
 * Jira
 * Confluence
 * ServiceNow
-
-### Development & Scripting
-
-* JavaScript
 * Groovy
+* JavaScript
 
 ---
 
@@ -222,6 +256,13 @@ Changes are implemented and validated on `develop` before being merged into `mai
 ---
 
 ## Changelog
+
+### v3.1 – DekaBank Experience
+
+* Added the current Senior Application Manager role at DekaBank
+* Added Deka-Connect+ application-management responsibilities
+* Expanded the technology overview with .NET, Windows Server and Linux
+* Added German, English and Spanish content for the new website experience entry
 
 ### v3.0 – Professional Portfolio Redesign
 
